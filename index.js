@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // contacts routes
-const contactsRoutes = require("./routes/contacts");
+const contactsRoutes = require("./routes/contactsRoutes");
 
 // use all routes
 app.use("/api/v1/", contactsRoutes);
