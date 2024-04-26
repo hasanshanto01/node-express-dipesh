@@ -34,4 +34,16 @@ router.route("/contacts/:id").get(getContact);
 router.route("/contacts/:id").put(updateContact);
 router.route("/contacts/:id").delete(deleteContact);
 
+// ***** optimize route controller defination *****
+
+// router.route("/contacts").get(getContacts).post(createContact);
+
+// router
+//   .route("/contacts/:id")
+//   .get(getContact)
+//   .put(updateContact)
+//   .delete(deleteContact);
+
+// ***** optimize route controller defination *****
+
 module.exports = router;
