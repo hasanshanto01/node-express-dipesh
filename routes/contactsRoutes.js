@@ -28,11 +28,17 @@ const {
 
 // ***** different ways to declare route *****
 
-router.route("/contacts").get(getContacts);
-router.route("/contacts").post(createContact);
-router.route("/contacts/:id").get(getContact);
-router.route("/contacts/:id").put(updateContact);
-router.route("/contacts/:id").delete(deleteContact);
+// router.route("/contacts").get(getContacts);
+// router.route("/contacts").post(createContact);
+// router.route("/contacts/:id").get(getContact);
+// router.route("/contacts/:id").put(updateContact);
+// router.route("/contacts/:id").delete(deleteContact);
+
+// router.route("/").get(getContacts);
+// router.route("/").post(createContact);
+// router.route("/:id").get(getContact);
+// router.route("/:id").put(updateContact);
+// router.route("/:id").delete(deleteContact);
 
 // ***** optimize route controller defination *****
 
@@ -45,5 +51,9 @@ router.route("/contacts/:id").delete(deleteContact);
 //   .delete(deleteContact);
 
 // ***** optimize route controller defination *****
+
+router.route("/").get(getContacts).post(createContact);
+
+router.route("/:id").get(getContact).put(updateContact).delete(deleteContact);
 
 module.exports = router;
